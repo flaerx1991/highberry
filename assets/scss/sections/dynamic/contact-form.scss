@@ -1,0 +1,239 @@
+.form-wrap {
+
+    form {
+        padding: rem-calc(22px) rem-calc(20px) rem-calc(16px);
+        background-color: transparent;
+
+        @media (min-width: $mediaTabletMin) {
+            padding: rem-calc(45px) 0 rem-calc(38px) 0;
+        }
+
+        @media (min-width: $mediaDesktopMid) {
+            padding: rem-calc(105px) 0 rem-calc(72px) 0;
+        }
+
+        .fields-wrap {
+
+            margin-bottom: rem-calc(14px);
+
+            @media (min-width: $mediaTabletMin) {
+                margin-bottom: rem-calc(17px);
+            }
+
+            .field-wrap {
+
+                &:not(:last-child) {
+                    margin-bottom: 7px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        margin-bottom: 9px;
+                    }
+
+                    @media (min-width: $mediaDesktopMid) {
+                        margin-bottom: 11px;
+                    }
+                }
+
+                input {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    border: none;
+                    border-radius: 2px;
+                    padding: rem-calc(8px) rem-calc(14px) rem-calc(6px);
+                    font-size: em-calc(10px);
+                    line-height: 1;
+                    color: $white;
+                    cursor: pointer;
+                    background: rgba(0, 0, 0, 0.2);
+
+                    &:focus {
+                        outline: 1px solid $white;
+                    }
+
+                    &::placeholder {
+                        color: $white;
+                    }
+
+
+                    @media (min-width: $mediaTabletMin) {
+                        font-size: em-calc(12px);
+                        padding: rem-calc(9px) rem-calc(18px) rem-calc(9px);
+                    }
+
+                    @media (min-width: $mediaDesktopMid) {
+                        font-size: em-calc(16px);
+                        padding: rem-calc(10px) rem-calc(22px);
+                    }
+                }
+            }
+        }
+
+        .description {
+            color: $white;
+            font-size: em-calc(8px);
+            padding-right: 7em;
+
+            @media (min-width: $mediaTabletMin) {
+                font-size: em-calc(12px);
+            }
+
+
+            @media (min-width: $mediaDesktopMid) {
+                font-size: em-calc(14px);
+                padding-right: 4em;
+            }
+
+            p {
+                &:first-child {
+                    padding-left: 27px;
+                    padding-bottom: 5px;
+
+                    @media (min-width: $mediaDesktopMid) {
+                        padding-left: 39px;
+                    }
+                }
+            }
+
+            .wpcf7-form-control-wrap {
+
+                .wpcf7-not-valid {
+                    outline: none !important;
+                    outline-color: none !important;
+
+                    .wpcf7-list-item {
+
+                        .wpcf7-list-item-label {
+
+                            &::before {
+                                outline: 0.5px solid !important;
+                                outline-color: red !important;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wpcf7 {
+        @media (min-width: $mediaTabletMax) {
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .wpcf7-submit {
+            display: block;
+            background-color: transparent;
+            border: 1px solid $white;
+            border-radius: 2px;
+            padding: rem-calc(6px) rem-calc(11px);
+            margin: 0 auto;
+            text-transform: uppercase;
+            color: $white;
+            font-size: em-calc(10px);
+            cursor: pointer;
+
+            @media (min-width: $mediaTabletMin) {
+                padding: rem-calc(10.25px) rem-calc(16.7px);
+                width: 100%;
+                max-width: 48.5%;
+                font-size: em-calc(12px);
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                padding: rem-calc(14.5px) rem-calc(26.5px);
+                max-width: 51%;
+                margin-top: 28px;
+            }
+        }
+
+        .wpcf7-list-item {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            line-height: 10px;
+
+            input[type="checkbox"] {
+                margin: 3px 14px 3px 0px;
+                opacity: 0;
+                z-index: 3;
+                cursor: pointer;
+
+
+                @media (min-width: $mediaTabletMax) {
+                    margin: 4px 15px 3px 0px;
+                    width: 23px;
+                    height: 23px;
+                    flex-shrink: 0;
+                }
+
+                &:checked+.wpcf7-list-item-label {
+
+                    &::before {
+                        content: "";
+                        background-image: url(../icons/checkbox-mark.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
+                }
+            }
+
+            .wpcf7-list-item-label {
+                position: relative;
+                display: flex;
+
+                @media (min-width: $mediaTabletMin) {
+                    line-height: 15px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 11px;
+                    height: 11px;
+                    background: rgba(255, 255, 255, 0.5);
+                    top: 50%;
+                    left: -15px;
+                    cursor: pointer;
+                    transform: translate(-100%, -50%);
+
+                    @media (min-width: $mediaTabletMin) {
+                        width: 19px;
+                        height: 19px;
+                        left: -8px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        width: 23px;
+                        height: 23px;
+                        left: -15px;
+                    }
+
+                }
+            }
+        }
+
+        .wpcf7-not-valid {
+            outline: 0.5px solid !important;
+            outline-color: red !important;
+        }
+
+        .wpcf7-not-valid-tip {
+            display: none;
+        }
+
+        .wpcf7-response-output {
+            display: none;
+        }
+
+        .wpcf7-spinner {
+            display: none;
+        }
+    }
+
+
+}

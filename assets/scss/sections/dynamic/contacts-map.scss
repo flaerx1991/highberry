@@ -1,0 +1,27 @@
+.contacts-map{
+    margin-top: 50px;
+    
+    .content-wrap{
+        margin: 0 auto;
+        .map-wrap{
+            position: relative;
+            padding-bottom: asrt-calc(320, 153);
+
+            @media (min-width: $mediaTabletMin) {
+                padding-bottom: asrt-calc(768, 383);
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                padding-bottom: asrt-calc(1440, 524);
+            }
+
+            #contacts_map{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

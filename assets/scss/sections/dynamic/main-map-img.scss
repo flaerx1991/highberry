@@ -1,0 +1,31 @@
+.main-map-img{
+    background-color: $white;
+    margin-bottom: unset;
+    .content-wrap{
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 20px;
+            padding-bottom: 14px;
+            @media (min-width: $mediaTabletMin) {
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                padding-top: 60px;
+                padding-bottom: 44px;
+            }
+
+        }
+        .we-are-close-img{
+            justify-content: center;
+
+            img{
+               display: block;
+               width: 100%;
+               height: auto;
+            }
+        }
+    }
+}

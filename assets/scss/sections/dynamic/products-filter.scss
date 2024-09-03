@@ -1,0 +1,188 @@
+.products-filter{
+    
+    .content-wrap{
+        padding: 0 21px;
+        @media (min-width: $mediaTabletMax) {
+            padding: 0 70px;
+        }
+        .products-filter-wrap{
+            margin-top: 5px;
+            margin-bottom: 28px;
+            position: relative;
+            @media (min-width: $mediaTabletMin) {
+                margin-top: 9px;
+                margin-bottom: 49px;
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                margin-top: 16px;
+                margin-bottom: 70px;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: $green;
+                @media (min-width: $mediaTabletMin) {
+                    bottom: -10px;
+                }
+                @media (min-width: $mediaTabletMax) {
+                    bottom: -15px;
+                }
+            }
+           .filter-button-components{
+                position: relative;
+                .filter-button{
+                    width: 30px;
+                    height: 30px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        width: 45px;
+                        height: 45px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    svg{
+                        path{
+                            transition: all 1s;
+                            fill: $green;
+                        }
+                    }
+                }
+
+                .filter-button-focus{
+                    svg{
+                        path{
+                            transition: all 1s;
+                            fill: $highlightgreen;
+                        }
+                    }
+                }
+
+                .prod-list{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateY(20px);
+                    opacity: 0;
+                    background-color: $white;
+                    border: 1px solid $green;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    padding: 20px 20px;
+                    width: 100%;
+                    list-style-type: none;
+                    z-index: 4;
+                    transition: all 1s;
+                    pointer-events: none;
+                    @media (min-width: $mediaTabletMin) {
+                        width: 40%;
+                        transform: translateY(23px);
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        width: unset;
+                        transform: translateY(55px);
+                        padding: 50px 80px 50px 60px;
+                    }
+                    ul{
+                        list-style-type: none;
+                        li{
+                            position: relative;
+                            z-index: 1;
+                            a{
+                                &:hover{
+                                    transition: 0.3s all;
+                                    color: $highlightgreen;
+                                }
+                            }
+                            &:not(:last-child){
+                                margin-bottom: 10px;
+                            }
+                          
+                            @media (min-width: $mediaTabletMin) {
+                                   
+                            }
+                            .open-cat-list-icon{
+                                position: absolute;
+                                display: unset;
+                                top: 0px;
+                                transform: translateX(10px);
+                                z-index: 2;
+                                cursor: pointer;
+                                svg{
+                                    width: 13px;
+                                    height: 8px;;
+                                }
+                                @media (min-width: $mediaTabletMax) {
+                                    top: 19px;
+                                    svg{
+                                        width: 17px;
+                                        height: 12px;
+                                    }
+                                }
+                               
+
+
+                            }
+                            
+                        }
+                    }
+
+                    //first layer nested list styles
+                    ul {
+                        > li > a{
+                            text-decoration: none;
+                            transition: 0.3s all;
+                            font-weight: 300;
+                            color: $green;
+                            text-transform: uppercase;
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 32px;
+                                line-height: 50px;
+                            }
+                        } 
+                    }
+
+
+                    //other layers nested list styles
+                    li ul {
+                        display: none;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                        > li a{
+                            text-decoration: none;
+                            transition: 0.3s all;
+                            font-weight: 400;
+                            color: $green;
+                            text-transform: none;
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 28px;
+                                line-height: 50px;
+                            }
+                        }
+                    }
+                }
+
+                .prod-list-animation{
+                    transition: all 1s;
+                    opacity: 1;
+                    transform: translateY(46px);
+                    pointer-events: all;
+                    @media (min-width: $mediaTabletMin) {
+                        transform: translateY(62px);
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        transform: translateY(117px);
+                    }
+                }
+           }
+        }
+    }
+}

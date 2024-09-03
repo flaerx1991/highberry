@@ -1,0 +1,378 @@
+.gallery-slider-sec {
+    width: 100%;
+    max-width: $mediaDesktopMid;
+    .content-wrap {
+        position: relative;
+        width: 100%;
+        margin-bottom: 100px;
+        overflow: hidden;
+        margin-top: 37px;
+
+        .swiper {
+            overflow: unset;
+        }
+
+        .gallery-slider {
+            position: relative;
+            width: 100%;
+            height: max-content;
+            margin: 0;
+            flex-direction: column;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:after {
+                        content: "";
+                        background-color: rgba(0, 0, 0, 0.5);
+                        height: 34px;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        z-index: 1;
+
+                        @media (min-width: $mediaTabletMin) {
+                            height: 78px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            height: 147px;
+                        }
+                    }
+
+                    .img-wrap {
+                        img {
+                            display: block;
+                            transition: 1s;
+                            width: 100%;
+                            aspect-ratio: 2.5/1;
+                            object-fit: cover;
+                            object-position: top;
+
+                            @media (min-width: $mediaTabletMin) {
+                                aspect-ratio: 2.32/1;
+                            }
+                        }
+                    }
+
+                    .slide-name {
+                        p{
+                            display: block;
+                            // position: relative;
+                            font-weight: 300;
+                            font-size: 10px;
+                            line-height: 12px;
+                            text-transform: uppercase;
+                            color: $white;
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 20px;
+                                line-height: 23px;
+                               
+                            }
+    
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 20px;
+                                line-height: 36px;
+                            }
+                        }
+                       
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 0%);
+                        z-index: 2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 34px;
+                        @media (min-width: $mediaTabletMin) {
+                            height: 78px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                           height: 147px;
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                position: relative;
+                bottom: 0;
+                height: 20px;
+                background-color: $lightergrey2;
+                display: flex;
+                justify-content: center;
+                padding: 6px 20px;
+                box-sizing: border-box;
+
+                @media (min-width: $mediaTabletMin) {
+                    height: 50px;
+                    padding: 18px 0;
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    height: 90px;
+                    padding: 35px 0;
+                }
+
+                .swiper-pagination-bullet {
+                    opacity: unset;
+                    width: unset;
+                    height: unset;
+                    border-radius: unset;
+                    background: unset;
+                    display: block;
+
+                }
+
+                .pagination-item {
+                    margin: 0 4px;
+                    background: $lightergrey2;
+                    width: 3.31px;
+                    height: 3.31px;
+                    transition: all 0.3s;
+                    border: 0.39px solid $linkgreen;
+                    border-radius: 10px;
+                    z-index: 3;
+                    box-sizing: unset;
+
+                    @media (min-width: $mediaTabletMin) {
+                        width: 9px;
+                        height: 9px;
+                        border: 1px solid $linkgreen;
+                        margin: 0 7.5px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        width: 17px;
+                        height: 17px;
+                        border: 2px solid $linkgreen;
+                        margin: 0 14px;
+                    }
+
+                  
+
+                    .line-item {
+                        position: relative;
+                        width: 0;
+                        top: 1.15px;
+                        height: 0.39px;
+                        background: $linkgreen;
+
+                        @media (min-width: $mediaTabletMin) {
+                            height: 1px;
+                            top: 4px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            height: 2px;
+                            top: 8px;
+                        }
+                    }
+                }
+
+                .swiper-pagination-bullet-active {
+                    background: $linkgreen;
+                    margin-right: 33px;
+                    transition: 0.3s;
+
+                    @media (min-width: $mediaTabletMin) {
+                        margin-right: 94px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        margin-right: 174px;
+                    }
+
+                    .item-info {
+                        animation-name: fadeSlideinfo;
+                        animation-duration: 0.2s;
+                        animation-fill-mode: both;
+
+                        @keyframes fadeSlideinfo {
+                            from {
+                                opacity: 0;
+                                transform: translate3d(0, 100%, 0);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translate3d(0, 0%, 0);
+                            }
+                        }
+                    }
+
+                    .line-item {
+                        animation-name: addLineToDot;
+                        animation-duration: 0.2s;
+                        animation-fill-mode: both;
+
+                        @media (max-width: $mediaTabletMin - 1) {
+                            @keyframes addLineToDot {
+                                from {
+                                    opacity: 0;
+                                    width: 0px;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    width: 39px;
+                                }
+                            }
+                        }
+
+                        @media (min-width: $mediaTabletMin) {
+                            @keyframes addLineToDot {
+                                from {
+                                    opacity: 0;
+                                    width: 0px;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    width: 106px;
+                                }
+                            }
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            @keyframes addLineToDot {
+                                from {
+                                    opacity: 0;
+                                    width: 0px;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buttons-wrap {
+                height: 34px;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                bottom: calc(0% + 20px);
+
+                @media (min-width: $mediaTabletMin) {
+                    height: 78px;
+                    bottom: calc(0% + 50px);
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    height: 147px;
+                    bottom: calc(0% + 90px);
+                }
+
+                .swiper-button-prev {
+                    left: 47px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        left: 41px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        left: 77px;
+                    }
+                }
+
+                .swiper-button-next {
+                    right: 47px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        right: 41px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        right: 77px;
+                    }
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    img {
+                        aspect-ratio: 0.523903078/1;
+                        object-fit: contain;
+
+                        @media (min-width: $mediaTabletMin) {
+                            width: 30%;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            width: 56%;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .gallery-slider-thumbs{
+            background-color: $lightergrey2;
+            .slider-thumbs-gallery{
+                .swiper-slide{
+                    // width: 100%;
+                aspect-ratio: 3.20618557/1;
+                object-fit: cover;
+                    opacity: 0.4;
+                    .img-wrap{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                            aspect-ratio: 3.20618557/1;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .swiper-slide-thumb-active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .videos-wrap{
+            .gallery-videos{
+                
+                .gallery-video-wrap{
+                    width: 100%;
+                    max-width: 900px;
+                    margin: 40px auto 0;
+                    position: relative;
+                    @media (min-width: $mediaTabletMin) {
+                        margin: 55px auto 0px;
+                    }
+            
+                    @media (min-width: $mediaTabletMax) {
+                        margin: 106px auto 0px;
+                    }
+
+
+
+                    .video{
+
+                        height: 174px;
+            
+                        @media (min-width: $mediaTabletMin) {
+                            height: 421px;
+                        }
+            
+                        @media (min-width: $mediaTabletMax) {
+                            height: 493px;
+                        }
+            
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.video-lighthouse-button{
+
+    .showreel-video {
+        margin: 40px auto;
+    
+        @media (min-width: $mediaTabletMin) {
+            margin: 65px auto;
+        }
+    
+        .video-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+            width: 100vw;
+            height: 100vh;
+            z-index: 999;
+            margin: 0 auto;
+            display: none;
+            .video-wrap {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                max-width: 900px;
+                height: 174px;
+                background: $white;
+                box-sizing: border-box;
+    
+                @media (min-width: $mediaTabletMin) {
+                    height: 421px;
+                }
+    
+                @media (min-width: $mediaTabletMax) {
+                    height: 491px;
+                }
+            }
+        }
+
+        .showreel-button-wrap {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            .showreel-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $white;
+                box-shadow: 0px 1.17143px 1.17143px rgba(0, 0, 0, 0.25);
+                border-radius: 3px;
+                box-sizing: border-box;
+                padding: 5px 30px;
+                cursor: pointer;
+    
+                @media (min-width: $mediaTabletMin) {
+                    padding: 10px 60px;
+                    border-radius: 6px;
+                }
+    
+                @media (min-width: $mediaTabletMax) {
+                    padding: 17px 100px;
+                    border-radius: 10px;
+                }
+                .showreel-img-wrap {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: $green;
+                    border: 0.3px solid $white;
+                    margin-right: 14px;
+    
+                    @media (min-width: $mediaTabletMin) {
+                        width: 40px;
+                        height: 40px;
+                        border: 0.6px solid $white;
+                        margin-right: 30px;
+                    }
+    
+                    @media (min-width: $mediaTabletMax) {
+                        width: 66px;
+                        height: 66px;
+                        border: 1px solid $white;
+                        margin-right: 48px;
+                    }
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 55%;
+                    }
+                }
+                p {
+                    font-weight: 300;
+                    font-size: 10.5px;
+                    line-height: 12px;
+                    text-transform: uppercase;
+                    color: $green;
+    
+                    @media (min-width: $mediaTabletMin) {
+                        font-size: 22.1143px;
+                        line-height: 26px;
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        font-size: 36px;
+                        line-height: 42px;
+                    }
+                }
+            }
+        }
+    }
+}

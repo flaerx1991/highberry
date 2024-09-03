@@ -1,0 +1,20 @@
+{
+  "name": "highberry",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "watch": "nodemon -e scss -x \"npm run compile:css && npm run compile:cssfonts\"",
+    "compile:css": "node-sass --output-style compressed --include-path scss assets/scss/app.scss assets/css/style.css --source-map true --source-map-contents sass",
+    "compile:cssfonts": "node-sass --output-style compressed --include-path scss assets/scss/fonts.scss assets/css/fonts.css"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.7",
+    "keen-slider": "^6.8.2"
+  }
+}

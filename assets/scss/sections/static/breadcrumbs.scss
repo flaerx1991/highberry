@@ -1,0 +1,93 @@
+.breadcrumbs{
+   padding: 0 20px;
+   margin: 7px auto;
+   width: 100%;
+   
+   @media (min-width: $mediaTabletMin) {
+      margin: 19px auto;
+   }
+
+   @media (min-width: $mediaTabletMax) {
+      margin: 46px auto;
+   }
+   .bread-wrap{
+      align-items: center;
+      position: relative;
+
+      &::after{
+         content: '';
+         position: absolute;
+         bottom: -8px;
+         left: 0;
+         width: 100%;
+         height: 1px;
+         background-color: $green;
+
+         @media (min-width: $mediaTabletMin) {
+            bottom: -16px;
+         }
+
+         @media (min-width: $mediaTabletMin) {
+            bottom: -23px;
+         }
+
+      }
+      .posts-page-link{
+         background-image: url(../icons/post-arrow14.svg);
+         background-repeat: no-repeat;
+         width: 15px;
+         height: 8px;
+         margin-right: 6px;
+         @media (min-width: $mediaTabletMin) {
+            background-image: url(../icons/post-arrow34.svg);
+            width: 34px;
+            height: 8px;
+            margin-right: 11px;
+         }
+
+         @media (min-width: $mediaTabletMin) {
+            background-image: url(../icons/post-arrow47.svg);
+            width: 47px;
+            height: 8px;
+            margin-right: 16px;
+         }
+      }
+
+      .post-name-date{
+         flex-direction: column;
+         @media (min-width: $mediaTabletMin) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+         }
+         .post-name{
+            font-size: 12px;
+            color: $green;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+
+            @media (min-width: $mediaTabletMin) {
+               font-size: 20px;
+               margin-bottom: 0px;
+            }
+         
+            @media (min-width: $mediaTabletMax) {
+               font-size: 28px;
+            }
+         }
+
+         .post-date{
+            font-size: 10px;
+            color: $green;
+            @media (min-width: $mediaTabletMin) {
+               font-size: 16px;
+            }
+         
+            @media (min-width: $mediaTabletMax) {
+               font-size: 20px;
+            }
+         }
+      }
+   }
+}

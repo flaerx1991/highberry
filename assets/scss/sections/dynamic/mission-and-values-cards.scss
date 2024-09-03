@@ -1,0 +1,112 @@
+.mission-and-values-cards{
+    @media (min-width: $mediaTabletMax ) {
+       padding: 0 21px;
+    }
+    @media (min-width: $mediaTabletMax + 200 ) {
+         padding: 0;
+    }
+    .content-wrap{
+       .mv-cards{
+            display: grid;
+            row-gap: 46px;
+            width: 100%;
+            max-width: 1176px;
+            margin: 0 auto;
+            @media (min-width: $mediaTabletMin) {
+               grid-template-columns: 1fr 1fr 1fr;
+               grid-template-rows: minmax(304px, 1fr) minmax(291px, 1fr);
+               column-gap: 31px;
+               row-gap: 42px;
+            }
+            
+            @media (min-width: $mediaTabletMax) {
+                grid-template-rows: minmax(416px, 1fr) minmax(416px, 1fr);
+                column-gap: 50px;
+                row-gap: 84px;
+            }
+            .mv-card-item {
+                width: 100%;
+                background: $white;
+                box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                padding: 36px 21px;
+                position: relative;
+                box-sizing: border-box;
+                min-height: 283px;
+                @media (min-width: $mediaTabletMin) {
+                    padding: 40px 15px;
+                    min-height: unset;
+
+                    &:last-child{
+                        grid-row: 2;
+                        grid-column: 1/-1;
+                    }
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    padding: 66px 25px;
+                }
+
+                .card-logo {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    background: $green3;
+                    width: 52px;
+                    height: 52px;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    padding: 8px;
+                    @media (min-width: $mediaTabletMin) {
+                        width: 43px;
+                        height: 43px;
+                        padding: 10px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        width: 70px;
+                        height: 70px;
+                        padding: 15px;
+                    }
+                }
+
+                .name-of-card {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 25px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $green;
+                    position: relative;
+                    width: fit-content;
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                
+                    @media (min-width: $mediaTabletMin) {
+                        margin-bottom: 7px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                }
+
+                .add-info {
+                    p {
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 25px;
+                        text-align: center;
+                        color: $black;
+
+                        @media (min-width: $mediaTabletMax) {
+                            font-size: 20px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+       }
+    }
+}

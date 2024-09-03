@@ -1,0 +1,195 @@
+.main-accordion {
+
+    .content-wrap {
+
+        h2 {
+            padding: 0 40px;
+            text-align: center;
+            margin-bottom: 14px;
+
+            @media (min-width: $mediaTabletMin) {
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                padding: 0;
+                margin-bottom: 41px;
+            }
+        }
+
+        .main-accordion-cols {
+            flex-direction: column;
+
+            @media (min-width: $mediaTabletMin) {
+                flex-direction: row;
+            }
+
+            .main-accordion-picture-col {
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 200px;
+                transition: background-image 0.4s ease;
+                background-position: center center;
+
+                @media (min-width: $mediaTabletMin) {
+                    width: 57%;
+                    height: auto;
+                    background-position: unset;
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    width: 49%;
+                    height: auto;
+                }
+            }
+
+            .main-accordion-list-col {
+                background-color: $lightergrey2;
+                padding: 21px;
+
+                @media (min-width: $mediaTabletMin) {
+                    width: 43%;
+                    padding: 29px 21px;
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    width: 51%;
+                    padding: 63px 89px;
+                }
+
+                h3 {
+                    text-align: left;
+                    color: $green;
+                    text-transform: uppercase;
+                    line-height: 28px;
+                    margin-bottom: 7px;
+                    font-size: 24px;
+                    font-weight: 400;
+
+                    @media (min-width: $mediaTabletMin) {
+                        font-size: 32px;
+                        line-height: 37.5px;
+                        margin-bottom: 9px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        margin-bottom: 23px;
+                        font-size: 48px;
+                    }
+                }
+
+                .service-tabs {
+
+                    .service-tabs-item {
+
+                        list-style-type: none;
+                        position: relative;
+                        cursor: pointer;
+                        padding-left: 26px;
+                        margin-bottom: 25px;
+
+                        @media (min-width: $mediaTabletMax) {
+                            padding-left: 37px;
+                            margin-bottom: 28px;
+                        }
+
+                        .service-tabs-title {
+                            font-size: 20px;
+                            font-weight: 300;
+                            color: $textblack;
+                            text-transform: uppercase;
+
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 28px;
+                            }
+                        }
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 2px;
+                            left: 0;
+                            width: 11px;
+                            height: 11px;
+                            border-radius: 50%;
+                            border: 1px solid $linkgreen;
+                            background: transparent;
+
+                            @media (min-width: $mediaTabletMin) {
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            @media (min-width: $mediaTabletMax) {
+                                width: 17px;
+                                height: 17px;
+                                border: 2px solid $linkgreen;
+                            }
+                        }
+
+                        &:not(:last-child) {
+                            &::after {
+                                content: '';
+                                height: 0%;
+                                width: 2px;
+                                display: block;
+                                background-color: $linkgreen;
+                                position: absolute;
+                                top: 15px;
+                                left: 6px;
+                                z-index: -1;
+                                transition: height 0.4s ease-out;
+
+                                @media (min-width: $mediaTabletMax) {
+                                    left: 10px;
+                                }
+                            }
+                        }
+
+                        .service-tabs-inner {
+                            margin-bottom: 15px;
+                            margin-top: 7px;
+                            position: relative;
+                            display: none;
+
+                            @media (min-width: $mediaTabletMax) {
+                                margin-top: 12px;
+                            }
+
+                            p {
+                                font-size: 14px;
+                                line-height: 22px;
+                                font-weight: 300;
+                                color: $black;
+
+                                @media (min-width: $mediaTabletMin) {
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+
+                        .active-tab {
+                            display: block;
+                        }
+
+                        &.tab-active {
+
+                            &:before {
+                                content: '';
+                                background: $linkgreen;
+                            }
+
+                            &::after {
+                                height: 100%;
+                                z-index: 1;
+                                transition: height 0.4s ease-in;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

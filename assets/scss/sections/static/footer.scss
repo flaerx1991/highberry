@@ -1,0 +1,274 @@
+.site-footer {
+    overflow: hidden;
+    margin-top: 30px;
+
+    @media (min-width: $mediaTabletMax ) {
+        margin-top: 100px;
+    }
+
+    .footer-wrap {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(74, 85, 71, 0) 0%, rgba(14, 17, 14, 0.71) 57.21%);
+                mix-blend-mode: darken;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        .footer-menu {
+            padding: 0 13px;
+            margin-bottom: 13px;
+
+            @media (min-width: $mediaTabletMin) {
+                padding: 0 18px;
+                column-gap: 78px;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (min-width: $mediaDesktopMid) {
+                padding: 0 109px;
+                column-gap: 0;
+                margin-bottom: 42px;
+            }
+
+            .col1 {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                grid-row: 2;
+
+                @media (min-width: $mediaTabletMin) {
+                    grid-row: unset;
+                    justify-items: start;
+                    grid-template-rows: 167px repeat(3, max-content);
+                    padding-top: 34px;
+                }
+
+                @media (min-width: $mediaDesktopMid) {
+                    grid-template-rows: 294px max-content max-content max-content;
+                    padding-top: 95px;
+                    grid-template-columns: 310px 455px;
+                    column-gap: 64px;
+                }
+
+                .footer-logo {
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .company-info {
+                    margin-bottom: 20px;
+                    margin-top: 16px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        margin-bottom: 33px;
+                        margin-top: 30px;
+                    }
+
+                    @media (min-width: $mediaDesktopMid) {
+                        margin-top: 100px;
+                        margin-bottom: 0;
+                        grid-row: 2;
+                        grid-column: 1;
+                    }
+
+                    .company-name {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $white;
+                        text-align: center;
+                        margin-bottom: 7px;
+
+                        @media (min-width: $mediaTabletMin) {
+                            font-size: 20px;
+                            text-align: unset;
+                        }
+
+                        @media (min-width: $mediaDesktopMid) {
+                            font-size: 24px;
+                        }
+                    }
+
+                    div {
+                        p {
+                            font-size: 10px;
+                            font-weight: 400;
+                            color: $white;
+                            text-align: center;
+
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 12px;
+                                text-align: unset;
+                                line-height: 20px;
+                                padding-right: 7em;
+                            }
+
+                            @media (min-width: $mediaDesktopMid) {
+                                font-size: 16px;
+                                line-height: 25px;
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                .phones-contacts {
+                    @media (min-width: $mediaTabletMin) {
+                        display: none;
+                    }
+                }
+
+                .footer-menu-list {
+                    list-style-type: none;
+                    grid-template-columns: max-content max-content max-content;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-bottom: 16px;
+
+                    @media (min-width: $mediaDesktopMid) {
+                        grid-row: 2;
+                        grid-column: 2;
+                        align-self: end;
+                        margin-bottom: 24px;
+                    }
+
+                    li {
+
+                        a {
+                            font-weight: 400;
+                            font-size: 10px;
+                            color: $white;
+                            text-decoration: none;
+                            text-transform: uppercase;
+
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 12px;
+                                line-height: 25px;
+                            }
+
+                            @media (min-width: $mediaDesktopMid) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .catalog {
+                    align-items: center;
+                    justify-content: end;
+                    width: 100%;
+                    font-size: 10px;
+                    color: $white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    @media (min-width: $mediaTabletMin) {
+                        font-size: 12px;
+                        line-height: 25px;
+                        justify-content: start;
+                    }
+
+                    @media (min-width: $mediaDesktopMid) {
+                        font-size: 16px;
+                        grid-row: 4;
+                        grid-column: 2;
+                    }
+
+                    img {
+                        margin-left: 9px;
+                        width: 10px;
+                        height: 12px;
+                    }
+
+                }
+            }
+
+            .col2 {
+                grid-row: 1;
+
+                @media (min-width: $mediaTabletMin) {
+                    grid-row: unset;
+                }
+
+                .phones-contacts {
+                    display: none;
+
+                    @media (min-width: $mediaTabletMin) {
+                        display: grid;
+                    }
+                }
+            }
+        }
+
+        .bottom-footer-block {
+            padding: 0 18px;
+            background-color: $black;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (min-width: $mediaTabletMin) {
+                height: 42px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 8px;
+                color: $borderwhite;
+
+                @media (min-width: $mediaTabletMin) {
+                    font-size: 10px;
+                }
+
+                @media (min-width: $mediaDesktopMid) {
+                    font-size: 12px;
+                }
+            }
+
+            a {
+                font-weight: 400;
+                font-size: 8px;
+                color: $borderwhite;
+                text-decoration: none;
+
+                @media (min-width: $mediaTabletMin) {
+                    font-size: 10px;
+                }
+
+                @media (min-width: $mediaDesktopMid) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

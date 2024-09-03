@@ -1,0 +1,776 @@
+.secondary-pages-banner{ 
+
+    .content-wrap{
+
+        .banner-template {
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-template-rows: 242px;
+            @media (min-width: $mediaTabletMin) {
+                grid-template-rows: 152px;
+            }
+        
+            @media (min-width: $mediaTabletMax) {
+                grid-template-rows: 290px;
+            }
+
+            .widescreenimg {
+                height: 400px;
+                width: 100%;
+                overflow: hidden;
+                @media (min-width: $mediaTabletMin) {
+                    height: 240px;
+                }
+        
+                @media (min-width: $mediaTabletMax) {
+                    height: 450px;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                    // aspect-ratio: 0.8/1;
+                    object-fit: cover;
+        
+                    @media (min-width: $mediaTabletMin) {
+                        // aspect-ratio: 3.2/1;
+                    }
+                }
+            }
+
+            .pagename-col-pad {
+                padding: 0 20px;
+                position: relative;
+                z-index: 1;
+                @media (min-width: $mediaTabletMin) {
+                    padding: 0 80px;
+                }
+        
+                @media (min-width: $mediaTabletMax) {
+                    padding: unset;
+                }
+                animation-name: fadeInUp;
+                animation-delay: 0.5s;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translate3d(0, 100%, 0);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translate3d(0, 0%, 0);
+                    }
+                }
+        
+                .page-name-col {
+                    width: 100%;
+                    max-width: 869px;
+                    padding: 26px 16px;
+                    background: $white;
+                    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+        
+                    @media (min-width: $mediaTabletMin) {
+                        padding: 27px 51px 45px;
+                    }
+        
+                    @media (min-width: $mediaTabletMax) {
+                        padding: 50px 70px;
+                        margin: 0 auto;
+                    }
+        
+                    h1 {
+                        font-weight: 500;
+                        line-height: 23px;
+                        color: $green;
+                        text-align: center;
+                        text-transform: uppercase;
+                        position: relative;
+                        margin: 0 auto;
+                        margin-bottom: 26px;
+        
+                        @media (min-width: $mediaTabletMin) {
+                           
+                            margin-bottom: 37px;
+                            line-height: 46px;
+                            width: fit-content;
+                        }
+        
+                        @media (min-width: $mediaTabletMax) {
+                            margin-bottom: 49px;
+                            line-height: 56px;
+                            width: unset;
+                        }
+                        &:after {
+                            content: "";
+                            width: calc(100% - 40px);
+                            position: absolute;
+                            top: unset;
+                            bottom: -13px;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: $green;
+                            height: 1px;
+        
+                            @media (min-width: $mediaTabletMin) {
+                                width: 100%;
+                                bottom: -16px;
+                            }
+        
+                            @media (min-width: $mediaTabletMax) {
+                                width: calc(100% - 149px);
+                                bottom: -20px;
+                            }
+                        }
+                    }
+        
+                    .page-info {
+                        margin-bottom: 20px;
+        
+                        @media (min-width: $mediaTabletMin) {
+                            margin-bottom: 31px;
+                        }
+        
+                        @media (min-width: $mediaTabletMax) {
+                            margin-bottom: 61px;
+                        }
+                        p {
+                            font-weight: 300;
+                            font-size: 10px;
+                            line-height: 15px;
+                            text-align: center;
+                            color: $black;
+        
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 16px;
+                                line-height: 25px;
+                            }
+        
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 20px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+
+                    .banner-tabs-repeater{
+                        justify-content: center;
+                        margin-top: 25px;
+                        row-gap: 20px;
+            
+                        @media (min-width: $mediaTabletMin) {
+                            grid-template-columns: max-content 161px max-content;
+                            column-gap: unset;
+                            row-gap: 0;
+                            justify-content: space-between;
+                        }
+                        
+                        @media (min-width: $mediaTabletMax) {
+                            column-gap: unset;
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+            
+                        .banner-tabs-item{
+                            align-items: center;
+            
+                            @media (min-width: $mediaTabletMin) {
+                                justify-content: center;
+                            }
+
+                            .green-circle-item{
+                                position: relative;
+                                border-radius: 50%;
+                                width: 35.5px;
+                                height: 35.5px;
+                                background: $green;
+                                margin-right: 15px;
+                                flex-shrink: 0;
+                                padding: 8px;
+            
+                                @media (min-width: $mediaTabletMin) {
+                                    width: 40px;
+                                    height: 40px;
+                                    margin-right: 20px;
+                                }
+            
+                                @media (min-width: $mediaTabletMax) {
+                                    width: 54px;
+                                    height: 54px;
+                                    margin-right: 28px;
+                                }
+                            }
+            
+                            .tab-info{
+            
+                                .tab-info-text{
+                                    align-items: end;
+                                    margin-bottom: 0px;
+            
+                                    @media (min-width: $mediaTabletMin) {
+                                        margin-bottom: 2px;  
+                                    }
+
+                                    @media (min-width: $mediaTabletMin) {
+                                        margin-bottom: 7px;
+                                    }
+                                    .tab-number{
+                                        font-weight: 600;
+                                        font-size: 16px;
+            
+                                        @media (min-width: $mediaTabletMin) {
+                                            font-size: 18px;
+                                        }
+                                        @media (min-width: $mediaTabletMax) {
+                                            font-size: 21px;
+                                        }
+                                    }
+            
+                                    .tab-number-text{
+                                        margin-left: 5px;
+                                        font-size: 11px;
+                                        @media (min-width: $mediaTabletMin) {
+                                            font-size: 13px;
+                                            margin-left: 2px;
+                                        }
+
+                                        @media (min-width: $mediaTabletMax) {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+            
+                                .name-tab-text{
+                                    text-transform: uppercase;
+                                    font-size: 11.5px;
+                                    @media (min-width: $mediaTabletMin) {
+                                        font-size: 12px;
+                                    }
+
+                                    @media (min-width: $mediaTabletMax) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post-banner{
+    
+    .content-wrap{
+        
+        .banner-template {
+            display: block;
+            grid-template-rows: unset;
+            @media (min-width: $mediaTabletMin) {
+                grid-template-rows: unset;
+            }
+        
+            @media (min-width: $mediaTabletMax) {
+                grid-template-rows: unset;
+            }
+
+            .widescreenimg {
+                height: 95px;
+                position: relative;
+
+                @media (min-width: $mediaTabletMin) {
+                    height: 240px;
+                }
+        
+                @media (min-width: $mediaTabletMax) {
+                    height: 450px;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            .pagename-col-pad {
+                padding: unset;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+
+                @media (min-width: $mediaTabletMin) {
+                    padding: unset;
+                }
+        
+                @media (min-width: $mediaTabletMax) {
+                    padding: unset;
+                }
+
+                animation-name: unset;
+                animation-delay: unset;
+                animation-duration: unset;
+                animation-fill-mode: unset;
+
+                .page-name-col {
+                    max-width: unset;
+                    padding: unset;
+                    background: unset;
+                    box-shadow: unset;
+        
+                    @media (min-width: $mediaTabletMin) {
+                        padding: unset;
+                    }
+        
+                    @media (min-width: $mediaTabletMax) {
+                        padding: unset;
+                        margin: 0 auto;
+                    }
+        
+                    h1 {
+                        color: $white;
+                        &:after {
+                            content: "";
+                            width: 200px;
+                            position: absolute;
+                            top: unset;
+                            bottom: -12px;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: $white;
+                            height: 1px;
+        
+                            @media (min-width: $mediaTabletMin) {
+                                width: 540px;
+                                bottom: -23px;
+                            }
+        
+                            @media (min-width: $mediaTabletMax) {
+                                width: 570px;
+                                bottom: -29px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contacts-banner{
+    
+    .content-wrap{
+        
+        .banner-template {
+            grid-template-rows: 24px;
+            @media (min-width: $mediaTabletMin) {
+                grid-template-rows: 87px 113px;
+            }
+        
+            @media (min-width: $mediaTabletMax) {
+                grid-template-rows: 179px 197px;
+            }
+
+            .widescreenimg {
+                height: 95px;
+                position: relative;
+                @media (min-width: $mediaTabletMin) {
+                    height: 240px;
+                }
+        
+                @media (min-width: $mediaTabletMax) {
+                    height: 450px;
+                }
+               
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            .pagename-col-pad {
+                padding: unset;
+                z-index: 2;
+
+                @media (min-width: $mediaTabletMin) {
+                    padding: unset;
+                }
+        
+                @media (min-width: $mediaTabletMax) {
+                    padding: unset;
+                }
+
+                animation-name: unset;
+
+                .page-name-col {
+                    max-width: unset;
+                    padding: unset;
+                    background: unset;
+                    box-shadow: unset;
+
+                    @media (min-width: $mediaTabletMin) {
+                        padding: unset;
+                    }
+        
+                    @media (min-width: $mediaTabletMax) {
+                        padding: unset;
+                        margin: 0 auto;
+                    }
+        
+                    h1 {
+                        color: $white;
+                        &:after {
+                            content: "";
+                            width: 100%;
+                            position: absolute;
+                            top: unset;
+                            bottom: -12px;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: $white;
+                            height: 1px;
+        
+                            @media (min-width: $mediaTabletMin) {
+                                width: 540px;
+                                bottom: -23px;
+                            }
+        
+                            @media (min-width: $mediaTabletMax) {
+                                width: 570px;
+                                bottom: -29px;
+                            }
+                        }
+                    }
+                }
+            }
+            .contacts-banner-wrap{
+                padding: 0 20px;
+                position: relative;
+                z-index: 2;
+
+                @media (min-width: $mediaTabletMin) {
+                    padding: 0 70px;       
+                }
+                .contacts-info-banner{
+                    width: 100%;
+                    max-width: 1300px;
+                    height: auto;
+                    background-color: $white;
+                    z-index: 1;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    padding: 25px 20px 25px;
+                    display: grid;
+                    row-gap: 25px;
+                    @media (min-width: $mediaTabletMin) {
+                        padding: 35px 35px 61px;
+                        row-gap: 37px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        padding: 71px 71px 75px;
+                        row-gap: 56px;
+                    }
+    
+                    .regular-col{
+
+    
+                        .contacts-info-wrap{
+                            grid-template-columns: 1fr;
+                            row-gap: 20px;
+                            .contacts-items{
+                                row-gap: 20px;
+                                @media (min-width: $mediaTabletMax) {
+                                    row-gap: 45px;
+                                }
+                                .contacts-item{
+                                    align-items: center;
+                                    @media (min-width: $mediaTabletMin) {
+                                        align-items: flex-start;
+                                    }
+                                    .green-circle-item{
+                                        position: relative;
+                                        border-radius: 50%;
+                                        width: 35.5px;
+                                        height: 35.5px;
+                                        background: $green;
+                                        margin-right: 15px;
+                                        flex-shrink: 0;
+                                        padding: 9px;
+                    
+                                        @media (min-width: $mediaTabletMin) {
+                                            width: 40px;
+                                            height: 40px;
+                                            margin-right: 24px;
+                                            padding: 10px;
+                                        }
+                    
+                                        @media (min-width: $mediaTabletMax) {
+                                            width: 70px;
+                                            height: 70px;
+                                            margin-right: 31px;
+                                            padding: 18px;
+                                        }
+                                    }
+                                    .contacts-info-items{
+                                        .contacts-item-title{
+                                            font-size: 16px;
+                                            color:$green;
+                                            margin-bottom: 12px;
+                
+                                            @media (min-width: $mediaTabletMin) {
+                                                font-size: 20px;
+                                                margin-bottom: 11px;
+                                            }
+                
+                                            @media (min-width: $mediaTabletMax) {
+                                                font-size: 28px;
+                                                margin-bottom: 11px;
+                                            }
+                                        }
+
+                                        .contacts-item-main-info{
+                                            p{
+                                                
+                                                font-size: 12px;
+                                                color: $black;
+        
+                                                @media (min-width: $mediaTabletMin) {
+                                                    font-size: 20px;
+                                                    line-height: 26px;
+                                                }
+        
+                                                @media (min-width: $mediaTabletMin) {
+                                                    font-size: 28px;
+                                                    line-height: 35px;
+                                                }
+                                            }
+                                            a{
+                                                text-decoration: none;
+                                                
+                                                color: $black;
+        
+                                                
+                                            }
+                                        }
+                                    }
+                                   
+    
+                                    .add-info-wrap{
+                                        .add-info-contacts{
+                                            p{
+                                                font-size: 12px;
+                                                color: $black;
+
+                                                @media (min-width: $mediaTabletMin) {
+                                                    font-size: 20px;
+                                                    line-height: 26px;
+                                                }
+
+                                                @media (min-width: $mediaTabletMin) {
+                                                    font-size: 28px;
+                                                    line-height: 35px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                               
+                            }
+                        }
+                    }
+                    .first-info-col{
+                        
+                        .contacts-info-wrap{  
+                            @media (min-width: $mediaTabletMin) {
+                                grid-template-columns: 1fr 143px;
+                                column-gap: 128px;
+                                row-gap: unset; 
+                            }
+                            @media (min-width: $mediaTabletMax) {
+                                grid-template-columns: 1fr 226px;
+                                column-gap: 205px;
+                            }
+
+                            .img-wrap{
+                                display: none;
+
+                                @media (min-width: $mediaTabletMin) {
+                                    display: block;
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        transform: translate(-50%, -50%);
+                                        background-color: $green;
+                                        width: 2px;
+                                        height: 100%;
+                                        bottom: 0;
+                                        top: 50%;
+                                        left: -64px;
+                
+                                
+                                        @media (min-width: $mediaTabletMax) {
+                                            left: -115px;
+                                        }
+                
+                                    }
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+    
+                    .second-info-col{
+                        .contacts-info-wrap{
+                            justify-content: center;
+                            @media (min-width: $mediaTabletMin) {
+                               row-gap: 60px;
+                            }
+                            @media (min-width: $mediaTabletMax) {
+                                grid-template-columns: 445px;
+                                
+                            }
+                            .contacts-page-form{
+                                border: 1px solid $green;
+                                border-radius: 10px;
+    
+                                @media (min-width: $mediaTabletMin) {
+                                    margin: 0 57px;
+                                }
+
+                                @media (min-width: $mediaTabletMax) {
+                                    margin: 0;
+                                }
+                                .contacts-form-wrap{
+                                    padding: 25px 0 0;
+                                    
+                                    .form-heading{
+                                        font-size: 12px;
+                                        color: $green;
+                                        text-align: center;
+                                        text-transform: uppercase;
+                                        width: 84%;
+                                        margin: 0 auto;
+    
+                                        @media (min-width: $mediaTabletMin) {
+                                            font-size: 16px;
+                                        }
+                                    }
+        
+                                    form{
+    
+                                        @media (min-width: $mediaTabletMin) {
+                                            padding: rem-calc(33px) rem-calc(33px) rem-calc(38px) ;
+                                        }
+                                        @media (min-width: $mediaTabletMax) {
+                                            padding: rem-calc(33px) rem-calc(33px) rem-calc(38px) ;
+                                        }
+                                        .fields-wrap{
+        
+                                            .field-wrap{
+        
+                                                input{
+                                                    color: $black;
+                                                    background: $white;
+                                                    border: 1px solid $green4;
+                                                    &::placeholder{
+                                                        color: $black;
+                                                    }
+        
+                                                    &:focus {
+                                                        outline: 0px solid $green;
+                                                        border: 1px solid $green;
+                
+                                                    }
+                                                }
+                                            }
+                                        }
+        
+                                        .description{
+                                            color: $black;
+                                            padding-right: 4em;
+                                        }
+                                    }
+                                    .wpcf7{
+                                        @media (min-width: $mediaTabletMax) {
+                                            max-width: unset;
+                                           
+                                        }
+                                    }
+                                    .wpcf7-submit{
+                                        border: 1px solid $green;
+                                        color: $green;
+    
+                                        @media (min-width: $mediaTabletMin) {
+                                            padding: rem-calc(14px) rem-calc(34px);
+                                            max-width: 51.5%;
+                                            margin-top: 30px;
+                                        }
+                                    }
+        
+                                    .wpcf7-list-item{
+                                        input[type="checkbox"]{
+                                            
+                                            &:checked + .wpcf7-list-item-label{
+                            
+                                                &::before{
+                                                    content: "";
+                                                    background-image: url(../icons/checkbox-mark.svg);
+                                                    background-repeat: no-repeat;
+                                                    background-size: contain;
+                                                    background-position: center; 
+                                                }
+                                            }     
+                                        }
+        
+                                        .wpcf7-list-item-label{
+                                            &:before{
+                                                
+                                                background: $green;
+                                            }
+                                        }
+                                    }
+        
+                                    .wpcf7-not-valid{
+                                        // outline: 0.5px solid!important;
+                                        // outline-color: red!important;
+        
+                                        outline: 0px solid red !important;
+                                        border: 1px solid red !important;
+                                    }
+                                }
+                            }     
+                        }
+                       
+                    }
+    
+                     
+                }
+            }
+            
+        }
+    }
+}

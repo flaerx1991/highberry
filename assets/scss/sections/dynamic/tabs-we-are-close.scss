@@ -1,0 +1,106 @@
+.tabs-we-are-close{
+
+    .content-wrap{
+
+        h2{
+            color: $green;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .we-are-close-tabs-repeater{
+            grid-template-columns: 278px;
+            justify-content: center;
+            margin-top: 25px;
+            row-gap: 20px;
+
+            @media (min-width: $mediaTabletMin) {
+                grid-template-columns: repeat(3,213px);
+                column-gap: 38px;
+                row-gap: 0;
+            }
+            
+            @media (min-width: $mediaTabletMax) {
+                grid-template-columns: repeat(3,291px);
+                column-gap: 52px;
+            }
+
+            .we-are-close-tabs-item{
+                border: 1px solid $borderwhite;
+                border-radius: 10px;
+                padding: 32px 8px 30px 14px;
+                align-items: center;
+
+                @media (min-width: $mediaTabletMin) {
+                    justify-content: center;
+                    padding: 17px 8px 11px 14px;
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    padding: 33px 32px;
+                }
+
+                .green-circle-item{
+                    position: relative;
+                    border-radius: 50%;
+                    width: 52px;
+                    height: 52px;
+                    background: $green;
+                    margin-right: 30px;
+                    flex-shrink: 0;
+                    padding: 8px;
+                    @media (min-width: $mediaTabletMin) {
+                        width: 38.79px;
+                        height: 38.79px;
+                        margin-right: 18px;
+                        padding: 10px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        width: 54px;
+                        height: 54px;
+                        margin-right: 18px;
+                        padding: 12px;
+                    }
+                }
+
+                .tab-info{
+
+                    .tab-info-text{
+                        align-items: end;
+                        margin-bottom: 7px;
+
+                        @media (min-width: $mediaTabletMin) {
+                            margin-bottom: 2px;
+                        }
+                        .tab-number{
+                            font-weight: 600;
+                            font-size: 24px;
+
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 18px;
+                            }
+                        }
+
+                        .tab-number-text{
+                            margin-left: 5px;
+
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 13px;
+                                margin-left: 2px;
+                            }
+                        }
+                    }
+
+                    .name-tab-text{
+                        text-transform: uppercase;
+
+                        @media (min-width: $mediaTabletMin) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

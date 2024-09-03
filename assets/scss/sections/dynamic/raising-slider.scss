@@ -1,0 +1,503 @@
+.raising-slider {
+    width: 100%;
+    max-width: 1920px;
+    .content-wrap {
+        position: relative;
+        width: 100%;
+        margin-bottom: 100px;
+        overflow: hidden;
+        margin-top: 37px;
+
+        .swiper {
+            overflow: unset;
+        }
+
+        .production-slider {
+            position: relative;
+            width: 100%;
+            height: max-content;
+            margin: 0;
+            flex-direction: column;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:after {
+                        content: "";
+                        background-color: rgba(0, 0, 0, 0.5);
+                        height: 34px;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        z-index: 1;
+
+                        @media (min-width: $mediaTabletMin) {
+                            height: 78px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            height: 147px;
+                        }
+                    }
+
+                    .img-wrap {
+                        img {
+                            display: block;
+                            transition: 1s;
+                            width: 100%;
+                            aspect-ratio: 2.5/1;
+                            object-fit: cover;
+
+                            @media (min-width: $mediaTabletMin) {
+                                aspect-ratio: 2.32/1;
+                            }
+                        }
+                    }
+
+                    .slide-name {
+                        font-weight: 300;
+                        font-size: 10px;
+                        line-height: 12px;
+                        text-transform: uppercase;
+                        color: $white;
+                        position: absolute;
+                        bottom: 4px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 2;
+
+                        @media (min-width: $mediaTabletMin) {
+                            font-size: 20px;
+                            line-height: 23px;
+                            bottom: 15px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            font-size: 40px;
+                            line-height: 47px;
+                            bottom: 27px;
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                position: relative;
+                bottom: 0;
+                height: 120px;
+                background-color: $white;
+                display: flex;
+                justify-content: center;
+                padding: 6px 20px;
+                box-sizing: border-box;
+
+                @media (min-width: $mediaTabletMin) {
+                    height: 214px;
+                    padding: 18px 0;
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    height: 403px;
+                    padding: 35px 0;
+                }
+
+                .swiper-pagination-bullet {
+                    opacity: unset;
+                    width: unset;
+                    height: unset;
+                    border-radius: unset;
+                    background: unset;
+                    display: block;
+
+                }
+
+                .pagination-item {
+                    margin: 0 4px;
+                    background: $white;
+                    width: 3.31px;
+                    height: 3.31px;
+                    transition: all 0.3s;
+                    border: 0.39px solid $linkgreen;
+                    border-radius: 10px;
+                    z-index: 3;
+                    box-sizing: unset;
+
+                    @media (min-width: $mediaTabletMin) {
+                        width: 9px;
+                        height: 9px;
+                        border: 1px solid $linkgreen;
+                        margin: 0 7.5px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        width: 17px;
+                        height: 17px;
+                        border: 2px solid $linkgreen;
+                        margin: 0 14px;
+                    }
+
+                    .item-info {
+                        position: absolute;
+                        top: 43px;
+                        left: 0;
+                        width: 100%;
+                        height: max-content;
+                        opacity: 0;
+                        display: grid;
+                        grid-template-columns: max-content max-content;
+                        justify-content: center;
+                        align-items: center;
+
+                        @media (min-width: $mediaTabletMin) {
+                            grid-template-columns: 160px max-content;
+                            top: 54px;
+                            padding: 0 40px;
+                            box-sizing: border-box;
+                            justify-content: unset;
+                            column-gap: 23px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            grid-template-columns: 300px max-content;
+                            top: 103px;
+                            padding: 0 77px;
+                        }
+
+                        .slider-item-img-wrap {
+                            display: none;
+
+                            @media (min-width: $mediaTabletMin) {
+                                display: block;
+                                height: 107px;
+                                overflow: hidden;
+                            }
+
+                            @media (min-width: $mediaTabletMax) {
+                                height: 201px;
+                            }
+
+                            img {
+                                aspect-ratio: 1.4953271028/1;
+                                object-fit: cover;
+                                width: 100%;
+                                border-radius: 5px;
+
+                                @media (min-width: $mediaTabletMax) {
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+
+                        .slide-content {
+                            display: grid;
+                            grid-template-columns: max-content max-content;
+                            column-gap: 23px;
+
+                            @media (min-width: $mediaTabletMin) {
+                                column-gap: 48px;
+                                grid-template-rows: max-content max-content;
+                                row-gap: 36px;
+                            }
+
+                            @media (min-width: $mediaTabletMax) {
+                                row-gap: 68px;
+                            }
+
+                            .item-name {
+                                display: none;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 16px;
+                                text-align: justify;
+                                text-transform: uppercase;
+                                color: $green;
+                                grid-row: 1;
+                                position: relative;
+
+                                @media (min-width: $mediaTabletMin) {
+                                    display: block;
+
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        display: block;
+                                        width: 63px;
+                                        height: 0.53px;
+                                        left: 0;
+                                        bottom: -11px;
+                                        background: $green;
+
+                                        @media (min-width: $mediaTabletMax) {
+                                            width: 119px;
+                                            height: 1px;
+                                        }
+                                    }
+                                }
+
+                                @media (min-width: $mediaTabletMax) {
+                                    font-size: 28px;
+                                    line-height: 30px;
+                                }
+                            }
+
+                            .slider-item-info {
+                                display: flex;
+                                align-items: center;
+                                grid-row: 2;
+
+                                .img-cont {
+                                    width: 33.5px;
+                                    height: 33.5px;
+                                    border-radius: 50%;
+                                    position: relative;
+                                    background-color: $green;
+                                    margin-right: 14px;
+                                    padding: 5px;
+                                    @media (min-width: $mediaTabletMin) {
+                                        width: 42px;
+                                        height: 42px;
+                                        margin-right: 20px;
+                                    }
+
+                                    @media (min-width: $mediaTabletMax) {
+                                        width: 54px;
+                                        height: 54px;
+                                        margin-right: 25px;
+                                    }
+                                }
+
+                                .slider-item-description {
+
+                                    position: relative;
+                                    display: grid;
+                                    grid-template-columns: max-content 1fr;
+                                    grid-template-rows: max-content max-content;
+                                    row-gap: 4px;
+
+                                    @media (min-width: $mediaTabletMin) {
+                                        row-gap: 7px;
+                                    }
+
+                                    p {
+
+                                        justify-self: self-start;
+
+                                        &:first-child {
+                                            display: none;
+                                        }
+
+                                        &:last-child {
+                                            display: none;
+                                        }
+
+                                        &:nth-child(2) {
+                                            font-weight: 600;
+                                            font-size: 16px;
+
+                                            @media (min-width: $mediaTabletMin) {
+                                                font-size: 18px;
+                                            }
+
+                                            @media (min-width: $mediaTabletMax) {
+                                                font-size: 21px;
+                                            }
+                                        }
+
+                                        &:nth-child(3) {
+                                            margin-left: 5px;
+                                            font-size: 11px;
+                                            align-self: end;
+
+                                            @media (min-width: $mediaTabletMin) {
+                                                font-size: 13px;
+                                                margin-left: 8px;
+                                            }
+
+                                            @media (min-width: $mediaTabletMax) {
+                                                font-size: 16px;
+                                            }
+                                        }
+
+                                        &:nth-child(4) {
+                                            grid-column: 1/-1;
+                                            text-transform: uppercase;
+                                            font-size: 9.5px;
+
+                                            @media (min-width: $mediaTabletMin) {
+                                                font-size: 12px;
+                                            }
+
+                                            @media (min-width: $mediaTabletMax) {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .line-item {
+                        position: relative;
+                        width: 0;
+                        top: 1.15px;
+                        height: 0.39px;
+                        background: $linkgreen;
+
+                        @media (min-width: $mediaTabletMin) {
+                            height: 1px;
+                            top: 4px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            height: 2px;
+                            top: 8px;
+                        }
+                    }
+                }
+
+                .swiper-pagination-bullet-active {
+                    background: $linkgreen;
+                    margin-right: 33px;
+                    transition: 0.3s;
+
+                    @media (min-width: $mediaTabletMin) {
+                        margin-right: 94px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        margin-right: 174px;
+                    }
+
+                    .item-info {
+                        animation-name: fadeSlideinfo;
+                        animation-duration: 0.2s;
+                        animation-fill-mode: both;
+
+                        @keyframes fadeSlideinfo {
+                            from {
+                                opacity: 0;
+                                transform: translate3d(0, 100%, 0);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translate3d(0, 0%, 0);
+                            }
+                        }
+                    }
+
+                    .line-item {
+                        animation-name: addLineToDot;
+                        animation-duration: 0.2s;
+                        animation-fill-mode: both;
+
+                        @media (max-width: $mediaTabletMin - 1) {
+                            @keyframes addLineToDot {
+                                from {
+                                    opacity: 0;
+                                    width: 0px;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    width: 39px;
+                                }
+                            }
+                        }
+
+                        @media (min-width: $mediaTabletMin) {
+                            @keyframes addLineToDot {
+                                from {
+                                    opacity: 0;
+                                    width: 0px;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    width: 106px;
+                                }
+                            }
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            @keyframes addLineToDot {
+                                from {
+                                    opacity: 0;
+                                    width: 0px;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buttons-wrap {
+                height: 34px;
+                width: 100%;
+                position: absolute;
+                z-index: 2;
+                bottom: calc(0% + 120px);
+
+                @media (min-width: $mediaTabletMin) {
+                    height: 78px;
+                    bottom: calc(0% + 214px);
+                }
+
+                @media (min-width: $mediaTabletMax) {
+                    height: 147px;
+                    bottom: calc(0% + 403px);
+                }
+
+                .swiper-button-prev {
+                    left: 47px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        left: 41px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        left: 77px;
+                    }
+                }
+
+                .swiper-button-next {
+                    right: 47px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        right: 41px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        right: 77px;
+                    }
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    img {
+                        aspect-ratio: 0.523903078/1;
+                        object-fit: contain;
+
+                        @media (min-width: $mediaTabletMin) {
+                            width: 30%;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            width: 56%;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

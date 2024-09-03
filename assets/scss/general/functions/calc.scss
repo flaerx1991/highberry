@@ -1,0 +1,20 @@
+
+@function em-calc($size) {
+    $emSize: $size / 16px;
+    @return #{$emSize}em;
+}
+
+@function rem-calc($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function lh-calc($font, $height) {
+    $remSize: $height / $font;
+    @return #{$remSize};
+}
+
+@function asrt-calc($width, $height){
+    $aspectRation : $height / $width * 100%;
+    @return #{$aspectRation};
+}

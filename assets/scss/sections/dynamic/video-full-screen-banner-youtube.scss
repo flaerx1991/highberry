@@ -1,0 +1,167 @@
+.video-full-screen-banner-youtube{
+    background-color: black;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        background-color: rgba(0,0,0,0.2);
+        inset: 0;
+    }
+    .video-wrap{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        
+        .content-wrap{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: grid;
+            align-content: end;
+            grid-auto-rows: min-content;
+            padding: 0 rem-calc(33px) 19rem;
+            gap: rem-calc(100px);
+
+            @media (min-width: $mediaTabletMin) {
+                align-content: center;
+                padding: 0 rem-calc(42px);
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                padding: 0 rem-calc(165px);
+            }
+
+            .logo{
+                max-width: rem-calc(255px);
+                display: none;
+
+                @media (min-width: $mediaTabletMin) {
+                    display: block;
+                }
+            }
+
+            h1{
+                color: $white;
+                font-weight: 300;
+                font-size: em-calc(32px);
+                max-width: rem-calc(420px);
+                line-height: 1.17;
+
+                @media (min-width: $mediaTabletMin) {
+                    font-size: em-calc(60px);
+                }
+            }
+        }
+
+        .poster{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            transition: 1s;
+        }
+
+        .poster.hidden{
+            opacity: 0;
+        }
+
+        .player{
+            z-index: 0;
+            aspect-ratio: 16/9;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+
+            @media (min-aspect-ratio: 16/9) {
+                height: 56.25vw;
+            }
+            @media (max-aspect-ratio: 16/9) {
+                width: 177.78vh;
+            }
+        }
+
+        .next-section-button{
+            display: block;
+            z-index: 2;
+            position: absolute;
+            bottom: rem-calc(108px);
+            right: rem-calc(32px);
+            max-width: rem-calc(63px);
+            max-height: rem-calc(63px);
+            cursor: pointer;
+
+            @media (min-width: $mediaTabletMin) {
+                
+            }
+        }
+
+        .video-lighthouse-button{
+            position: absolute;
+            z-index: 2;
+            bottom: rem-calc(108px);
+            right: rem-calc(107px) !important;
+            @media (min-width: $mediaTabletMin) {
+                
+            }
+            .showreel-video{
+                margin: 0 !important;
+                .video-banner{
+                    .video-wrap{
+                        height: 200px;
+                        @media (min-width: $mediaTabletMin) {
+                            height: 421px;
+                        }
+                        @media (min-width: $mediaTabletMax) {
+                            max-width: 90%;
+                            height: 70%;
+                        }
+                    }
+                }
+                
+                .showreel-button-wrap{
+                    .showreel-button{
+                        box-shadow: unset;
+                        background: transparent;
+                        border: 0.5px solid $white;
+                        padding: 10.5px 20px 10.5px 30px;
+                        border-radius: 10px;
+                      
+                        .showreel-img-wrap{
+                            background: transparent;
+                            border: 1px solid $white !important;
+                            flex-shrink: 0;
+                            width: 30px;
+                            height: 30px;
+                            @media (min-width: $mediaTabletMax) {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 30px;
+                            }
+                        }
+
+                        p{
+                            color: $white;
+                            font-size: 12px;
+                            line-height: 20px;
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 22px;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
